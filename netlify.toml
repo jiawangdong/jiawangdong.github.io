@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "https://jwd.netlify.com/*"
+  to = "https://jiawangdong.me/:splat"
+  force = true
