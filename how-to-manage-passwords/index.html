@@ -1,4 +1,1108 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><link href="https://fonts.lug.ustc.edu.cn/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"><link rel="stylesheet" href="/css/main.css?v=7.1.2"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=7.1.2"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=7.1.2"><link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222"><script id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Gemini",version:"7.1.2",sidebar:{position:"left",display:"post",offset:12,onmobile:!1,dimmer:!1},back2top:!0,back2top_sidebar:!1,fancybox:!1,fastclick:!1,lazyload:!1,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><meta name="description" content="有个朋友在我上一篇博客《我使用的App之印象笔记》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。 四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺"><meta name="keywords" content="安全,密码"><meta property="og:type" content="article"><meta property="og:title" content="如何管理好账号密码"><meta property="og:url" content="http://jiawangdong.com/how-to-manage-passwords/index.html"><meta property="og:site_name" content="贾王东的博客"><meta property="og:description" content="有个朋友在我上一篇博客《我使用的App之印象笔记》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。 四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2019-07-03T03:46:45.041Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="如何管理好账号密码"><meta name="twitter:description" content="有个朋友在我上一篇博客《我使用的App之印象笔记》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。 四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺"><link rel="canonical" href="http://jiawangdong.com/how-to-manage-passwords/"><script id="page.configurations">CONFIG.page={sidebar:""}</script><title>如何管理好账号密码 | 贾王东的博客</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-11603557-1"></script><script>var host=window.location.hostname;if("localhost"!==host){function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-11603557-1")}</script><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-title,.use-motion .comments,.use-motion .menu-item,.use-motion .motion-element,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .logo,.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">贾王东的博客</span><span class="logo-line-after"><i></i></span></a></div></div><div class="site-nav-toggle"><button aria-label="切换导航栏"><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://jiawangdong.com/how-to-manage-passwords/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="贾王东"><meta itemprop="description" content="我在努力着：一不说谎，二不食言。"><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="贾王东的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">如何管理好账号密码</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建时间：2014-03-28 09:54:01" itemprop="dateCreated datePublished" datetime="2014-03-28T09:54:01+08:00">2014-03-28</time> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i></span> <span class="post-meta-item-text">更新于</span> <time title="修改时间：2019-07-03 11:46:45" itemprop="dateModified" datetime="2019-07-03T11:46:45+08:00">2019-07-03</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/软件/" itemprop="url" rel="index"><span itemprop="name">软件</span></a></span></span></div></header><div class="post-body" itemprop="articleBody"><p>有个朋友在我上一篇博客《<a href="http://jiawangdong.com/yinxiang-evernote/">我使用的App之印象笔记</a>》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。</p><p>四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺序才行，当时办完之后，有个同事问我具体的流程和手续，我说等我写一篇博客吧，结果四年过去了，那篇文章还没写出来，现在想写也没法写了，具体情形已经几乎忘光了，我一直记着这件事，为自己没有兑现承诺耿耿于怀。这位盆友，我都内疚了这么多年了，你就原谅我吧。</p><p>所以这一次，我就先把这个承诺给兑现了，说一说密码管理。</p><h3 id="1-账号分级"><a href="#1-账号分级" class="headerlink" title="1 账号分级"></a>1 账号分级</h3><p>第一个需要考虑的是账号分级的问题，根据重要程度，我将账号分为四个级别。</p><h4 id="第一级：网上支付账号"><a href="#第一级：网上支付账号" class="headerlink" title="第一级：网上支付账号"></a>第一级：网上支付账号</h4><p>网上银行和支付宝直接涉及到资金的安全，必须设定独立的密码。网上支付平台一般都会在登陆和支付的时候要求输入不同的密码，而且还有自己相应的安全软件（甚至硬件如U盾），所以一般密码不会被盗。网上支付出问题一般是被诈骗，自己操作把钱打过去了。</p><h4 id="第二级：常用邮箱账号"><a href="#第二级：常用邮箱账号" class="headerlink" title="第二级：常用邮箱账号"></a>第二级：常用邮箱账号</h4><p>无论是注册网络服务还是论坛，都需要提供Email，互联网公司一般会将Email作为识别唯一用户的方式，密码丢失后也可以通过接收Email来找回或修改。这样一来常用Email就变得非常重要，所以一定要设置一个足够复杂的密码（详见下文）。我自己使用两个Email，最常用的是QQ邮箱，然后是Google邮箱，这两个邮箱我都设置了非常强的密码，同时设置了多重安全保护手段，最重要的是绑定手机号。</p><h4 id="第三级：关键服务账号"><a href="#第三级：关键服务账号" class="headerlink" title="第三级：关键服务账号"></a>第三级：关键服务账号</h4><p>一般我们都会使用一些网络服务，比如我会用<a href="http://jiawangdong.com/baiduyun/" title="百度云">百度云</a>存储文件，用<a href="http://jiawangdong.com/yinxiang-evernote/" title="印象笔记">印象笔记</a>来记笔记、用Flickr存储照片等，这些账号的密码一旦被盗会发生信息泄露，所以也要设置比较强的密码，最好也绑定手机号，账号发生异常（比如异地登陆、多次输入密码错误等）的时候，有些还会发邮件或短信提醒。</p><h4 id="第四级：其他网站账号"><a href="#第四级：其他网站账号" class="headerlink" title="第四级：其他网站账号"></a>第四级：其他网站账号</h4><p>另外一些网站我们注册只是为了查看信息，比如微博（戒了之后我只偶尔查看信息）、知乎、户外论坛等，就算密码被盗也不会对我们造成什么损失，为了记忆方便，可以设置比较简单的密码，而且可以全部设置成一样的。</p><h3 id="2-密码安全"><a href="#2-密码安全" class="headerlink" title="2 密码安全"></a>2 密码安全</h3><p>绝大部分密码出问题的原因无非两点。</p><h4 id="一是密码设置太简单。"><a href="#一是密码设置太简单。" class="headerlink" title="一是密码设置太简单。"></a>一是密码设置太简单。</h4><p>比如用姓名、公司名称、生日、单词等作为密码，这种密码多试几次都能试出来（我曾经就试出了某政府部门投诉邮箱的密码），破解器就更容易算出来了。有一次我去一个客户公司，他们专门给公安系统提供专业的密码破解设备和技术，我请他们演示一下，结果发现要暴力破解一个包含了大写字母、小写字母、数字、符号的密码，需要很多年或者数量非常多的设备才有可能完成。如果你不是一个能够给破解者带来极大收益的人，他们不会找到你头上的，所以只要设置稍微复杂一点的密码，使用大写字母、小写字母、数字、符号这四种类型中的三种或者全部，几乎是不可能被破解的。</p><h4 id="二是自己保护不当。"><a href="#二是自己保护不当。" class="headerlink" title="二是自己保护不当。"></a>二是自己保护不当。</h4><p>这是最多发生的情况。比如浏览不安全的网页、下载不安全的文档、安装不安全的软件、甚至使用不安全的电脑，这样的结果是密码直接被盗取了，我们看到朋友的QQ被盗绝大部分都属于这种情况。所以我从来不在别人的电脑或手机上登陆QQ，包括我媳妇和我妈的电脑。 另外，现在有很多网站要求留手机号码，也有朋友问我安全性的问题，我的原则是，像腾讯、阿里、百度等大的互联网公司的服务，最好留手机号，其他的网站则一般不留手机号。</p><h3 id="3-密码保存"><a href="#3-密码保存" class="headerlink" title="3 密码保存"></a>3 密码保存</h3><p>我那位朋友估计想问的是这个问题：我们注册了很多网站和服务的账号，设置了不同的密码，每次登陆都要输入一遍，非常麻烦。我的方法是使用Chrome浏览器，登陆自己的Google账号（地球人都有你没有？赶紧注册！），设置同步选项里“密码”打勾（我把所有的都打了勾），第一次登陆某个网站时会提示保存账号密码，同意之后就会自动同步到Google账号中，以后使用手机、平板或其他电脑登陆这个网站都不用再输入账号密码了，当然也要使用Chrome浏览器和登陆Google账号。需要说明的是，与支付相关的密码是无法保存的，当然也是不能保存的。</p><p>写到这里我想到一个关键的问题：Google已经被赶出了大陆，很多地方根本无法登陆Google账号，我自己倒是有翻墙工具，但是朋友们不一定有啊。翻墙是个技术活儿，有很多方法，我用的是<a href="http://www.x-berry.com/goagent/" target="_blank" rel="noopener">这个</a>。</p><h3 id="4-高级解决方案"><a href="#4-高级解决方案" class="headerlink" title="4 高级解决方案"></a>4 高级解决方案</h3><p>除了以上所说的方法之外，还有一些方法我称为“高级解决方案”的方法，就是使用如<a href="http://keepass.info/‎" target="_blank" rel="noopener">KeePass</a>、<a href="https://lastpass.com/" target="_blank" rel="noopener">LastPass</a>、<a href="https://agilebits.com/onepassword‎" target="_blank" rel="noopener">1Password</a>等专业密码管理软件，既然是“高级”的，就是说有一定技术或者至少有很大兴趣的人才会去用，也就不需要我介绍具体的使用方法了。好吧，其实我也没用过。</p><h3 id="一般人我不告诉他"><a href="#一般人我不告诉他" class="headerlink" title="一般人我不告诉他"></a>一般人我不告诉他</h3><p>我跟很多朋友说过信用卡不要设置密码，因为一旦设置了密码，如果被盗刷，银行是不会有任何赔偿的；如果没有设置密码，信用卡被盗刷，银行（在一定条件下）是要赔偿的。另外，网上支付最好使用信用卡，储蓄卡内只保留最低额度的活期存款，所有余款存入理财通或余额宝（此法针对屌丝，土豪们自然有更好的投资渠道）。这样不但可提高收益，即使发生意外，也可以将损失降到最低。</p></div><footer class="post-footer"><div class="post-tags"><a href="/tags/安全/" rel="tag"># 安全</a> <a href="/tags/密码/" rel="tag"># 密码</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/yinxiang-evernote/" rel="next" title="我使用的App之印象笔记"><i class="fa fa-chevron-left"></i> 我使用的App之印象笔记</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/gao-xiaosong-and-his-morning-call/" rel="prev" title="高晓松和他的《晓说》">高晓松和他的《晓说》<i class="fa fa-chevron-right"></i></a></div></div></footer></div></article></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li></ul><div class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><p class="site-author-name" itemprop="name">贾王东</p><div class="site-description motion-element" itemprop="description">我在努力着：一不说谎，二不食言。</div></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">93</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/"><span class="site-state-item-count">8</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/"><span class="site-state-item-count">123</span> <span class="site-state-item-name">标签</span></a></div></nav></div></div><div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-账号分级"><span class="nav-number">1.</span> <span class="nav-text">1 账号分级</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一级：网上支付账号"><span class="nav-number">1.1.</span> <span class="nav-text">第一级：网上支付账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二级：常用邮箱账号"><span class="nav-number">1.2.</span> <span class="nav-text">第二级：常用邮箱账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三级：关键服务账号"><span class="nav-number">1.3.</span> <span class="nav-text">第三级：关键服务账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四级：其他网站账号"><span class="nav-number">1.4.</span> <span class="nav-text">第四级：其他网站账号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-密码安全"><span class="nav-number">2.</span> <span class="nav-text">2 密码安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一是密码设置太简单。"><span class="nav-number">2.1.</span> <span class="nav-text">一是密码设置太简单。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二是自己保护不当。"><span class="nav-number">2.2.</span> <span class="nav-text">二是自己保护不当。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-密码保存"><span class="nav-number">3.</span> <span class="nav-text">3 密码保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-高级解决方案"><span class="nav-number">4.</span> <span class="nav-text">4 高级解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一般人我不告诉他"><span class="nav-number">5.</span> <span class="nav-text">一般人我不告诉他</span></a></li></ol></div></div></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span><span class="with-love" id="animate"><i class="fa fa-user"></i></span> <span class="author" itemprop="copyrightHolder">贾王东</span></div><div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div><span class="post-meta-divider">|</span><div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script>"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script src="/lib/jquery/index.js?v=3.4.1"></script><script src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script src="/js/utils.js?v=7.1.2"></script><script src="/js/motion.js?v=7.1.2"></script><script src="/js/affix.js?v=7.1.2"></script><script src="/js/schemes/pisces.js?v=7.1.2"></script><script src="/js/scrollspy.js?v=7.1.2"></script><script src="/js/post-details.js?v=7.1.2"></script><script src="/js/next-boot.js?v=7.1.2"></script><script>// Popup Window;
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.lug.ustc.edu.cn/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="有个朋友在我上一篇博客《我使用的App之印象笔记》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。 四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺">
+<meta name="keywords" content="安全,密码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何管理好账号密码">
+<meta property="og:url" content="http://jiawangdong.com/how-to-manage-passwords/index.html">
+<meta property="og:site_name" content="贾王东的博客">
+<meta property="og:description" content="有个朋友在我上一篇博客《我使用的App之印象笔记》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。 四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-03T03:46:45.041Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何管理好账号密码">
+<meta name="twitter:description" content="有个朋友在我上一篇博客《我使用的App之印象笔记》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。 四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://jiawangdong.com/how-to-manage-passwords/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>如何管理好账号密码 | 贾王东的博客</title>
+  
+
+
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11603557-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-11603557-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">贾王东的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Suche</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Suche..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiawangdong.com/how-to-manage-passwords/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="贾王东">
+      <meta itemprop="description" content="我在努力着：一不说谎，二不食言。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贾王东的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何管理好账号密码
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2014-03-28 09:54:01" itemprop="dateCreated datePublished" datetime="2014-03-28T09:54:01+08:00">2014-03-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-03 11:46:45" itemprop="dateModified" datetime="2019-07-03T11:46:45+08:00">2019-07-03</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/软件/" itemprop="url" rel="index"><span itemprop="name">软件</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>有个朋友在我上一篇博客《<a href="http://jiawangdong.com/yinxiang-evernote/">我使用的App之印象笔记</a>》留言问我密码管理的问题，我说“等我有空写一篇吧”。我现在已经形成另外一种强迫症：人家问我一个什么事，只要我觉得一两句话说不清楚的，我总是回答“等我有空写一篇吧”，人家那边着急要解决问题，我这边才慢慢悠构思文章，请原谅我这个患有强迫症的人吧。</p>
+<p>四年前在广州辞职时，当时是在一家大型国企，辞职手续极其复杂，辞职表上需要二十来个部门签字，而且要按照一定的顺序才行，当时办完之后，有个同事问我具体的流程和手续，我说等我写一篇博客吧，结果四年过去了，那篇文章还没写出来，现在想写也没法写了，具体情形已经几乎忘光了，我一直记着这件事，为自己没有兑现承诺耿耿于怀。这位盆友，我都内疚了这么多年了，你就原谅我吧。</p>
+<p>所以这一次，我就先把这个承诺给兑现了，说一说密码管理。</p>
+<h3 id="1-账号分级"><a href="#1-账号分级" class="headerlink" title="1 账号分级"></a>1 账号分级</h3><p>第一个需要考虑的是账号分级的问题，根据重要程度，我将账号分为四个级别。</p>
+<h4 id="第一级：网上支付账号"><a href="#第一级：网上支付账号" class="headerlink" title="第一级：网上支付账号"></a>第一级：网上支付账号</h4><p>网上银行和支付宝直接涉及到资金的安全，必须设定独立的密码。网上支付平台一般都会在登陆和支付的时候要求输入不同的密码，而且还有自己相应的安全软件（甚至硬件如U盾），所以一般密码不会被盗。网上支付出问题一般是被诈骗，自己操作把钱打过去了。</p>
+<h4 id="第二级：常用邮箱账号"><a href="#第二级：常用邮箱账号" class="headerlink" title="第二级：常用邮箱账号"></a>第二级：常用邮箱账号</h4><p>无论是注册网络服务还是论坛，都需要提供Email，互联网公司一般会将Email作为识别唯一用户的方式，密码丢失后也可以通过接收Email来找回或修改。这样一来常用Email就变得非常重要，所以一定要设置一个足够复杂的密码（详见下文）。我自己使用两个Email，最常用的是QQ邮箱，然后是Google邮箱，这两个邮箱我都设置了非常强的密码，同时设置了多重安全保护手段，最重要的是绑定手机号。</p>
+<h4 id="第三级：关键服务账号"><a href="#第三级：关键服务账号" class="headerlink" title="第三级：关键服务账号"></a>第三级：关键服务账号</h4><p>一般我们都会使用一些网络服务，比如我会用<a href="http://jiawangdong.com/baiduyun/" title="百度云">百度云</a>存储文件，用<a href="http://jiawangdong.com/yinxiang-evernote/" title="印象笔记">印象笔记</a>来记笔记、用Flickr存储照片等，这些账号的密码一旦被盗会发生信息泄露，所以也要设置比较强的密码，最好也绑定手机号，账号发生异常（比如异地登陆、多次输入密码错误等）的时候，有些还会发邮件或短信提醒。</p>
+<h4 id="第四级：其他网站账号"><a href="#第四级：其他网站账号" class="headerlink" title="第四级：其他网站账号"></a>第四级：其他网站账号</h4><p>另外一些网站我们注册只是为了查看信息，比如微博（戒了之后我只偶尔查看信息）、知乎、户外论坛等，就算密码被盗也不会对我们造成什么损失，为了记忆方便，可以设置比较简单的密码，而且可以全部设置成一样的。</p>
+<h3 id="2-密码安全"><a href="#2-密码安全" class="headerlink" title="2 密码安全"></a>2 密码安全</h3><p>绝大部分密码出问题的原因无非两点。</p>
+<h4 id="一是密码设置太简单。"><a href="#一是密码设置太简单。" class="headerlink" title="一是密码设置太简单。"></a>一是密码设置太简单。</h4><p>比如用姓名、公司名称、生日、单词等作为密码，这种密码多试几次都能试出来（我曾经就试出了某政府部门投诉邮箱的密码），破解器就更容易算出来了。有一次我去一个客户公司，他们专门给公安系统提供专业的密码破解设备和技术，我请他们演示一下，结果发现要暴力破解一个包含了大写字母、小写字母、数字、符号的密码，需要很多年或者数量非常多的设备才有可能完成。如果你不是一个能够给破解者带来极大收益的人，他们不会找到你头上的，所以只要设置稍微复杂一点的密码，使用大写字母、小写字母、数字、符号这四种类型中的三种或者全部，几乎是不可能被破解的。</p>
+<h4 id="二是自己保护不当。"><a href="#二是自己保护不当。" class="headerlink" title="二是自己保护不当。"></a>二是自己保护不当。</h4><p>这是最多发生的情况。比如浏览不安全的网页、下载不安全的文档、安装不安全的软件、甚至使用不安全的电脑，这样的结果是密码直接被盗取了，我们看到朋友的QQ被盗绝大部分都属于这种情况。所以我从来不在别人的电脑或手机上登陆QQ，包括我媳妇和我妈的电脑。 另外，现在有很多网站要求留手机号码，也有朋友问我安全性的问题，我的原则是，像腾讯、阿里、百度等大的互联网公司的服务，最好留手机号，其他的网站则一般不留手机号。</p>
+<h3 id="3-密码保存"><a href="#3-密码保存" class="headerlink" title="3 密码保存"></a>3 密码保存</h3><p>我那位朋友估计想问的是这个问题：我们注册了很多网站和服务的账号，设置了不同的密码，每次登陆都要输入一遍，非常麻烦。我的方法是使用Chrome浏览器，登陆自己的Google账号（地球人都有你没有？赶紧注册！），设置同步选项里“密码”打勾（我把所有的都打了勾），第一次登陆某个网站时会提示保存账号密码，同意之后就会自动同步到Google账号中，以后使用手机、平板或其他电脑登陆这个网站都不用再输入账号密码了，当然也要使用Chrome浏览器和登陆Google账号。需要说明的是，与支付相关的密码是无法保存的，当然也是不能保存的。</p>
+<p>写到这里我想到一个关键的问题：Google已经被赶出了大陆，很多地方根本无法登陆Google账号，我自己倒是有翻墙工具，但是朋友们不一定有啊。翻墙是个技术活儿，有很多方法，我用的是<a href="http://www.x-berry.com/goagent/" target="_blank" rel="noopener">这个</a>。</p>
+<h3 id="4-高级解决方案"><a href="#4-高级解决方案" class="headerlink" title="4 高级解决方案"></a>4 高级解决方案</h3><p>除了以上所说的方法之外，还有一些方法我称为“高级解决方案”的方法，就是使用如<a href="http://keepass.info/‎" target="_blank" rel="noopener">KeePass</a>、<a href="https://lastpass.com/" target="_blank" rel="noopener">LastPass</a>、<a href="https://agilebits.com/onepassword‎" target="_blank" rel="noopener">1Password</a>等专业密码管理软件，既然是“高级”的，就是说有一定技术或者至少有很大兴趣的人才会去用，也就不需要我介绍具体的使用方法了。好吧，其实我也没用过。</p>
+<h3 id="一般人我不告诉他"><a href="#一般人我不告诉他" class="headerlink" title="一般人我不告诉他"></a>一般人我不告诉他</h3><p>我跟很多朋友说过信用卡不要设置密码，因为一旦设置了密码，如果被盗刷，银行是不会有任何赔偿的；如果没有设置密码，信用卡被盗刷，银行（在一定条件下）是要赔偿的。另外，网上支付最好使用信用卡，储蓄卡内只保留最低额度的活期存款，所有余款存入理财通或余额宝（此法针对屌丝，土豪们自然有更好的投资渠道）。这样不但可提高收益，即使发生意外，也可以将损失降到最低。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/安全/" rel="tag"># 安全</a>
+          
+            <a href="/tags/密码/" rel="tag"># 密码</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/yinxiang-evernote/" rel="next" title="我使用的App之印象笔记">
+                <i class="fa fa-chevron-left"></i> 我使用的App之印象笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/gao-xiaosong-and-his-morning-call/" rel="prev" title="高晓松和他的《晓说》">
+                高晓松和他的《晓说》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">贾王东</p>
+              <div class="site-description motion-element" itemprop="description">我在努力着：一不说谎，二不食言。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">93</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">123</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-账号分级"><span class="nav-number">1.</span> <span class="nav-text">1 账号分级</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一级：网上支付账号"><span class="nav-number">1.1.</span> <span class="nav-text">第一级：网上支付账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二级：常用邮箱账号"><span class="nav-number">1.2.</span> <span class="nav-text">第二级：常用邮箱账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三级：关键服务账号"><span class="nav-number">1.3.</span> <span class="nav-text">第三级：关键服务账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四级：其他网站账号"><span class="nav-number">1.4.</span> <span class="nav-text">第四级：其他网站账号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-密码安全"><span class="nav-number">2.</span> <span class="nav-text">2 密码安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一是密码设置太简单。"><span class="nav-number">2.1.</span> <span class="nav-text">一是密码设置太简单。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二是自己保护不当。"><span class="nav-number">2.2.</span> <span class="nav-text">二是自己保护不当。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-密码保存"><span class="nav-number">3.</span> <span class="nav-text">3 密码保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-高级解决方案"><span class="nav-number">4.</span> <span class="nav-text">4 高级解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一般人我不告诉他"><span class="nav-number">5.</span> <span class="nav-text">一般人我不告诉他</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">贾王东</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
     var isfetched = false;
     var isXml = true;
     // Search DB path;
@@ -314,4 +1418,40 @@
       if (shouldDismissSearchPopup) {
         onPopupClose();
       }
-    });</script></body></html>
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
