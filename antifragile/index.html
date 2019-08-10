@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.lug.ustc.edu.cn/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1 什么是反脆弱一只玻璃杯摔在地上，会变成碎片，玻璃杯是脆弱的；一块布摔在地上，还是一块布，布是强韧的；一个孩子摔在地上，不但可以站起来，还可以比以前更强大，孩子是反脆弱的。燃烧的蜡烛在大风面前是脆弱的，但熊熊烈火在大风面前是反脆弱的。塔勒布用“脆弱-强韧-反脆弱”三元模型来解释万事万物，告诉我们不但要建立自己的反脆弱性，还要帮助建立整个社会的反脆弱性。 反脆弱性指从波动性中获益，包括：不确定性">
+<meta name="keywords" content="读书,反脆弱,纳西姆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《反脆弱》读书笔记">
+<meta property="og:url" content="http://jiawangdong.com/antifragile/index.html">
+<meta property="og:site_name" content="贾王东的博客">
+<meta property="og:description" content="1 什么是反脆弱一只玻璃杯摔在地上，会变成碎片，玻璃杯是脆弱的；一块布摔在地上，还是一块布，布是强韧的；一个孩子摔在地上，不但可以站起来，还可以比以前更强大，孩子是反脆弱的。燃烧的蜡烛在大风面前是脆弱的，但熊熊烈火在大风面前是反脆弱的。塔勒布用“脆弱-强韧-反脆弱”三元模型来解释万事万物，告诉我们不但要建立自己的反脆弱性，还要帮助建立整个社会的反脆弱性。 反脆弱性指从波动性中获益，包括：不确定性">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://live.staticflickr.com/65535/48501689266_dcc8d15176_o.jpg">
+<meta property="og:updated_time" content="2019-08-10T10:05:39.843Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《反脆弱》读书笔记">
+<meta name="twitter:description" content="1 什么是反脆弱一只玻璃杯摔在地上，会变成碎片，玻璃杯是脆弱的；一块布摔在地上，还是一块布，布是强韧的；一个孩子摔在地上，不但可以站起来，还可以比以前更强大，孩子是反脆弱的。燃烧的蜡烛在大风面前是脆弱的，但熊熊烈火在大风面前是反脆弱的。塔勒布用“脆弱-强韧-反脆弱”三元模型来解释万事万物，告诉我们不但要建立自己的反脆弱性，还要帮助建立整个社会的反脆弱性。 反脆弱性指从波动性中获益，包括：不确定性">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/48501689266_dcc8d15176_o.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://jiawangdong.com/antifragile/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>《反脆弱》读书笔记 | 贾王东的博客</title>
+  
+
+
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11603557-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-11603557-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">贾王东的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiawangdong.com/antifragile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="贾王东">
+      <meta itemprop="description" content="我在努力着：一不说谎，二不食言。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贾王东的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">《反脆弱》读书笔记
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-10 10:38:32 / 修改时间：18:05:39" itemprop="dateCreated datePublished" datetime="2019-08-10T10:38:32+08:00">2019-08-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书/" itemprop="url" rel="index"><span itemprop="name">读书</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://live.staticflickr.com/65535/48501689266_dcc8d15176_o.jpg" alt></p>
+<h4 id="1-什么是反脆弱"><a href="#1-什么是反脆弱" class="headerlink" title="1 什么是反脆弱"></a>1 什么是反脆弱</h4><p>一只玻璃杯摔在地上，会变成碎片，玻璃杯是脆弱的；一块布摔在地上，还是一块布，布是强韧的；一个孩子摔在地上，不但可以站起来，还可以比以前更强大，孩子是反脆弱的。燃烧的蜡烛在大风面前是脆弱的，但熊熊烈火在大风面前是反脆弱的。塔勒布用<strong>“脆弱-强韧-反脆弱”三元模型</strong>来解释万事万物，告诉我们<strong>不但要建立自己的反脆弱性，还要帮助建立整个社会的反脆弱性。</strong></p>
+<p><strong>反脆弱性指从波动性中获益</strong>，包括：不确定性、变化性、不完全的知识、机会、混沌、波动、混乱、熵、时间、未知性、随机性、动荡、压力、错误、分散的结果、无知等。</p>
+<p>被塔勒布<strong>批判的职业</strong>包括：经济学家、政治家、预言家、评论家、大学教授、管理顾问、金融从业者、职业经理人等等，他认为这些人要么本身很脆弱，要么在让整个社会变得更脆弱；他<strong>最推崇的是创业者</strong>，然后是自由职业者、发明家和英雄<strong>，</strong>他认为这些人不但自身具有反脆弱性，而且让整个社会更具反脆弱性。我想起芒格在《穷查理宝典》中批评心理学家和经济学家这两个职业。因此，对待经济学家说的话，要格外谨慎。</p>
+<h4 id="2-反脆弱性法则"><a href="#2-反脆弱性法则" class="headerlink" title="2 反脆弱性法则"></a>2 反脆弱性法则</h4><p>根据书中的内容，我总结了一些反脆弱性法则。</p>
+<ol>
+<li><strong>波动法则</strong>：很多事物是偏好压力和波动性的，比如经济系统、人的身体等，它们本质上就是要从波动中获益。对于这些系统不应过度控制，应该适度放任以便其发挥并强化自身的反脆弱性。</li>
+<li><strong>干预法则</strong>：正如森林里的小火灾会燃烧掉森林中的可燃材料一样，经济中的小伤害也会尽早地淘汰弱势企业，让他们“尽早失败”（从头再来），并尽量减少对系统的长期伤害。我们不应该干预这些不会造成太大伤害事情，而应该干预那些可能会造成毁灭性伤害的事情，比如核试验、环境污染、规模过大的公司等。</li>
+<li><strong>自然法则</strong>：自然（以及类似自然的系统）喜欢有机体之间存在多样性，而不是一个不朽的有机体内部存在多样性。系统中的噪声和干扰越多，优胜劣汰、适者生存的效应就越明显。大自然的行为背后有其严格的逻辑，直到你能够证明并非如此；人类和科学的行为有其缺陷，直到你能够证明并非如此。</li>
+<li><strong>竞争法则</strong>：有机体之间的竞争有利于推动物种的进化：我们体内的细胞会相互竞争，细胞内部的蛋白质会相互竞争。依此类推，个人之间、公司之间、种族之间、国家之间都会相互竞争。竞争使得整个人类更加具有反脆弱性。</li>
+<li><strong>杠铃法则</strong>：要么极端厌恶风险，要么极端偏好风险，不要接受“中等程度”或“温和”的风险，因为所谓“中等风险”其实只是骗人的把戏，受到巨大测量误差的影响。</li>
+<li><strong>简单法则</strong>：一个复杂的系统并不需要复杂的管理机制、法规和政策，复杂机制会导致意想不到的连锁反应，而干预又会导致不可预测的后果。法律越复杂，业内人士越容易找到套利的机会。</li>
+<li><strong>经验法则</strong>：并不是知识或理论在指导实践，而是从实践经验中产生了知识和理论并不断优化的。绝大多数的经济理论和管理理论都是不可靠的，经验反而更加可靠。经验主义者在面对与过去看到的不完全相同，哪怕是几近相同的情况也会坚称“我不知道”。</li>
+<li><strong>压力法则</strong>：紧急而强烈的压力对人的健康有益，尤其是在经受压力后给予较长的恢复期时，比如遇到一条蛇并战胜它，然后躺在舒服的沙发里喝杯咖啡；温和但连续不断的压力源对人的健康有害，比如按揭贷款、考试压力、琐碎事务、填写表格、回复邮件、上班通勤等。</li>
+<li><strong>凸性法则</strong>：一样东西的减少，带给你的损失是较小的，但如果增加，则带给你极大的收益，则叫做“凸性效应”，比如跑步速度对健康的影响；反之，一样东西的减少，带给你的收益是较小的，但如果增加，带给你的极大的损失，则叫做“凹性效应”，比如高速公路上的汽车数量对出行时间的影响。</li>
+<li><strong>担当法则</strong>：如果你勇于承担风险，有尊严地面对自己的命运，那么你做什么都不会贬低自己所做的事情；如果你不承担风险，那么你做什么都不会使自己伟大。</li>
+<li><strong>长寿法则</strong>：某个东西对你来说可能没有任何意义，比如宗教（如果你是一个无神论者）或者某个不合理的古老习惯或做法，但如果这个东西已经存在很长一段时间，那么，不管你认为它合理或不合理，你都可以预期它还会存在更长的时间，比那些预言它会死亡的人存活的时间更长。</li>
+<li><strong>证明法则</strong>：缺乏证据证明某事是存在/正确的，并不代表某事是不存在/不正确的。</li>
+<li><strong>因果法则</strong>：我们看到两样东西存在一定关联性，往往会认为它们有因果关系，但事实上大多数情况下都是错误的。大部分事情的发生，是无法“找到原因”的，不要相信媒体对各类事件原因的剖析。</li>
+<li><strong>结果法则</strong>：某样东西的真假并不重要，但它造成的结果的好坏和大小非常重要，因此我们不应该争论真假问题，而应该关注结果，特别是结果造成影响的大小。</li>
+<li><strong>冗余法则</strong>：如果不发生意外，冗余（比如多余的肾脏和活期存款）就是一种浪费。然而，意外通常会发生。因此对于一旦发生意外会产生严重后果的事情，都应该建立冗余。</li>
+<li><strong>预测法则</strong>：你无法预测未来，但你可以预测到，那些依靠预测行事的人往往会承担更多的风险，遇到一些麻烦，甚至可能失败。因为预测者在预测误差面前是脆弱的，过于自信的飞行员会机毁人亡，数据预测则导致人们承担更多的风险。</li>
+</ol>
+<h4 id="3-反脆弱法则的一些实际应用"><a href="#3-反脆弱法则的一些实际应用" class="headerlink" title="3 反脆弱法则的一些实际应用"></a>3 反脆弱法则的一些实际应用</h4><p>如何将这些法则运用的实际生活中，以下举出一些实例。</p>
+<p><strong>对待职业</strong>：选择创业或者自由职业，而不是担任公司白领。如果不得不上班，最可取的是高强度地工作一段非常短的时间，然后什么都不做，直到完全恢复，再重来一次；而不是从事低强度、无休止、缺乏睡眠、乏味的工作。</p>
+<p><strong>对待理财</strong>：将财富分配在风险和收益的两端，一部分放在极其安全的渠道上（比如定期存款），一部分放在极有风险但可能产生极大收益的地方（比如股票或期货），而不是放在既不太安全又不会有太大收益的地方（比如基金或商业保险）。</p>
+<p><strong>对待社交</strong>：多参加有真正大牛的活动，不要去参加经济论坛或普通聚会。</p>
+<p><strong>对待健身</strong>：一次举起100磅带来的好处，比两次举起50磅带来的益处多得多。每次都选择自己能够完成的最大重量并逐步加大重量，而不是长期使用适中的重量。</p>
+<p><strong>对待疾病</strong>：小病不要吃药不要做手术，让身体的反脆弱性去战胜疾病并自我强化，大病才需要吃药做手术。</p>
+<p><strong>对待管理</strong>：不要试图去控制所有事情，过度控制会积累脆弱性，系统自身的反脆弱性会自我调节和自我强化。</p>
+<p><strong>对待决策</strong>：不要任何事情都去问专家，不要过度迷信专家，听从自己内心的声音。</p>
+<p><strong>对待读书</strong>：选择已经存在了25年以上的书，而不是最新的热销书。</p>
+<p><strong>对待旅行</strong>：随机漫步去发现一些风景，深入地感受和了解它，而不是跟着导游走马观花或者去著名景点打卡。</p>
+<p><strong>对待拖延</strong>：拖延可能是在告诉你，你正在做一件自己不喜欢的事情。在这种情况下，时间管理只会让事情变得更坏，不如直接换个环境或者换个工作。</p>
+<p><strong>对待变化</strong>：只关注和干预重大的数据或条件的变化，忽略细小的变化，或者对细小的变化不做干预。</p>
+<p><strong>对待学习</strong>：学校的必修课程只要通过就好，把时间用在自己真正感兴趣的东西上，越深入越好。</p>
+<p><strong>对待责任</strong>：任何时候，都不应该逃避责任，都应该承担自己应该承担的责任。</p>
+<p>贾王东 | 2019.8</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/读书/" rel="tag"># 读书</a>
+          
+            <a href="/tags/反脆弱/" rel="tag"># 反脆弱</a>
+          
+            <a href="/tags/纳西姆/" rel="tag"># 纳西姆</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/download-youtube-list/" rel="next" title="如何批量下载YouTube视频列表">
+                <i class="fa fa-chevron-left"></i> 如何批量下载YouTube视频列表
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">贾王东</p>
+              <div class="site-description motion-element" itemprop="description">我在努力着：一不说谎，二不食言。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">95</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">127</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-什么是反脆弱"><span class="nav-number">1.</span> <span class="nav-text">1 什么是反脆弱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-反脆弱性法则"><span class="nav-number">2.</span> <span class="nav-text">2 反脆弱性法则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-反脆弱法则的一些实际应用"><span class="nav-number">3.</span> <span class="nav-text">3 反脆弱法则的一些实际应用</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">贾王东</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
